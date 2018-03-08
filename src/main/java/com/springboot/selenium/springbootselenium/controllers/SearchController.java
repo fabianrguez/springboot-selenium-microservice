@@ -14,7 +14,7 @@ public class SearchController {
 	private GooglePage googlePage;
 
 	@PostMapping(path = "/search")
-	public void launchChrome(@RequestBody SearchDto search) throws InterruptedException {
+	public void search(@RequestBody SearchDto search) throws InterruptedException {
 		googlePage.performGoogleSearch(search);
 	}
 }

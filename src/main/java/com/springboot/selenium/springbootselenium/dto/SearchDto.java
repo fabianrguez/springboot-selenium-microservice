@@ -1,11 +1,11 @@
 package com.springboot.selenium.springbootselenium.dto;
 
-import io.github.bonigarcia.wdm.DriverManagerType;
+import com.springboot.selenium.springbootselenium.platform.browser.BrowserTypes;
 
 public class SearchDto {
 
 	private String search;
-	private DriverManagerType browser;
+	private BrowserTypes browser;
 
 	public String getSearch() {
 		return search;
@@ -15,11 +15,11 @@ public class SearchDto {
 		this.search = search;
 	}
 
-	public DriverManagerType getBrowser() {
+	public BrowserTypes getBrowser() {
 		return browser;
 	}
 
-	public void setBrowser(DriverManagerType browser) {
+	public void setBrowser(BrowserTypes browser) {
 		this.browser = browser;
 	}
 }

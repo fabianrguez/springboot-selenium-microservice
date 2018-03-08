@@ -2,7 +2,6 @@ package com.springboot.selenium.springbootselenium.platform.browser;
 
 import com.springboot.selenium.springbootselenium.services.WebDriverService;
 import com.springboot.selenium.springbootselenium.services.WebDriverWaitService;
-import io.github.bonigarcia.wdm.DriverManagerType;
 import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,7 @@ public class BrowserActions {
 	@Autowired
 	private WebDriverWaitService webDriverWaitService;
 
-	public void openBrowser(DriverManagerType browser) {
+	public void openBrowser(BrowserTypes browser) {
  		webDriverService.setupWebDriver(browser);
 	}
 
