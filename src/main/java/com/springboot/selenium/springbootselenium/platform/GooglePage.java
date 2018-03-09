@@ -21,15 +21,12 @@ public class GooglePage {
 	private SearchActions searchActions;
 
 	public void performGoogleSearch(SearchDto search) throws InterruptedException {
-		log.info("Abriendo navegador");
 		browserActions.openBrowser(search.getBrowser());
 		initElements();
 		browserActions.navigateTo(GOOGLE_URL);
 		searchActions.search(search.getSearch());
-		log.info("buscando en google " + search.getSearch());
 		Thread.sleep(5000);
 		browserActions.closeBrowser();
-		log.info("navegador cerrado");
 	}
 
 	private void initElements() {
